@@ -69,59 +69,69 @@ This project is a full-stack web application that allows users to submit their n
 
 1. Navigate to the backend folder:
 
-```bash
-cd email-sender-backend
+    ```bash
+    cd email-sender-backend
+    ```
 
 2. Install dependencies:
 
-bash
-Copy
-Edit
-npm install
-Configure MySQL credentials inside server.js (host, user, password, database).
+    ```bash
+    npm install
+    ```
 
-Start the backend server:
+3. Configure MySQL credentials inside `server.js` (host, user, password, database).
 
-bash
-Copy
-Edit
-node server.js
-Frontend Setup
+4. Start the backend server:
+
+    ```bash
+    node server.js
+    ```
+
+### Frontend Setup
+
 1. Navigate to the frontend folder:
 
-bash
-Copy
-Edit
-cd ../email-sender-frontend
-2. Open index.html in your browser or serve with any static server.
+    ```bash
+    cd ../email-sender-frontend
+    ```
 
-Usage
-1. Fill in your name and email.
+2. Open `index.html` in your browser or serve with any static server.
 
-2. Complete the Google reCAPTCHA.
+---
 
-3. Click Send Confirmation.
+## Usage
 
-4. You will receive a confirmation email if successful.
+- Fill in your name and email.
+- Complete the Google reCAPTCHA.
+- Click **Send Confirmation**.
+- You will receive a confirmation email if successful.
 
-Environment Variables
+---
+
+## Environment Variables
+
 For security, it's recommended to use environment variables for sensitive information like:
 
-MySQL user and password
+- MySQL user and password
+- Gmail credentials for Nodemailer
+- Google reCAPTCHA secret key
 
-Gmail credentials for Nodemailer
+Consider using `.env` files or other secrets management methods for production.
 
-Google reCAPTCHA secret key
+---
 
-Consider using .env files or other secrets management for production.
+## Notes
 
-Notes
-This project uses Gmail SMTP; you may need to enable "App Passwords" or "Less Secure Apps" in your Gmail account.
+- This project uses Gmail SMTP; you may need to enable "App Passwords" or "Less Secure Apps" in your Gmail account.
+- The database table `users` must be created beforehand with columns `id` (auto-increment), `name`, and `email`.
+- Google reCAPTCHA keys can be obtained from [Google reCAPTCHA admin](https://www.google.com/recaptcha/admin).
 
-The database table users must be created beforehand with columns id (auto-increment), name, and email.
+---
 
-Google reCAPTCHA keys can be obtained from Google reCAPTCHA admin.
+## Author
 
-Author
-Aneesh Krishna — Github.com/Aneesh495
+Aneesh Krishna — [GitHub Profile](https://github.com/Aneesh495)
 
+---
+
+Feel free to open issues or submit pull requests if you want to contribute!
