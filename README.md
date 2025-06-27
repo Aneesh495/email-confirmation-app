@@ -95,7 +95,7 @@ Edit
 cd ../email-sender-frontend
 2. Open index.html in your browser or serve with any static server.
 
-### Usage
+Usage
 1. Fill in your name and email.
 
 2. Complete the Google reCAPTCHA.
@@ -104,7 +104,7 @@ cd ../email-sender-frontend
 
 4. You will receive a confirmation email if successful.
 
-### Environment Variables
+Environment Variables
 For security, it's recommended to use environment variables for sensitive information like:
 
 MySQL user and password
@@ -115,7 +115,7 @@ Google reCAPTCHA secret key
 
 Consider using .env files or other secrets management for production.
 
-### Notes
+Notes
 This project uses Gmail SMTP; you may need to enable "App Passwords" or "Less Secure Apps" in your Gmail account.
 
 The database table users must be created beforehand with columns id (auto-increment), name, and email.
