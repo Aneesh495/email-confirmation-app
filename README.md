@@ -41,19 +41,19 @@ This project is a full-stack web application that allows users to submit their n
 
 ## Project Structure
 
-email-confirmation-app/
-│
-├── email-sender-frontend/ # AngularJS frontend code
-│ ├── index.html
-│ ├── app.js
-│ └── style.css
-│
-├── email-sender-backend/ # Node.js backend code
-│ ├── server.js
-│ ├── package.json
-│ └── package-lock.json
-│
-└── README.md # Project documentation (this file)
+    email-confirmation-app/
+    │
+    ├── email-sender-frontend/       # AngularJS frontend code
+    │   ├── index.html
+    │   ├── app.js
+    │   └── style.css
+    │
+    ├── email-sender-backend/        # Node.js backend code
+    │   ├── server.js
+    │   ├── package.json
+    │   └── package-lock.json
+    │
+    └── README.md                    # Project documentation (this file)
 
 ---
 
@@ -72,7 +72,7 @@ email-confirmation-app/
 ```bash
 cd email-sender-backend
 
-Install dependencies:
+2. Install dependencies:
 
 bash
 Copy
@@ -87,22 +87,22 @@ Copy
 Edit
 node server.js
 Frontend Setup
-Navigate to the frontend folder:
+1. Navigate to the frontend folder:
 
 bash
 Copy
 Edit
 cd ../email-sender-frontend
-Open index.html in your browser or serve with any static server.
+2. Open index.html in your browser or serve with any static server.
 
 Usage
-Fill in your name and email.
+1. Fill in your name and email.
 
-Complete the Google reCAPTCHA.
+2. Complete the Google reCAPTCHA.
 
-Click Send Confirmation.
+3. Click Send Confirmation.
 
-You will receive a confirmation email if successful.
+4. You will receive a confirmation email if successful.
 
 Environment Variables
 For security, it's recommended to use environment variables for sensitive information like:
@@ -115,12 +115,13 @@ Google reCAPTCHA secret key
 
 Consider using .env files or other secrets management for production.
 
-Notes: 
-1. This project uses Gmail SMTP; you may need to enable "App Passwords" or "Less Secure Apps" in your Gmail account.
+Notes
+This project uses Gmail SMTP; you may need to enable "App Passwords" or "Less Secure Apps" in your Gmail account.
 
-2. The database table users must be created beforehand with columns id (auto-increment), name, and email.
+The database table users must be created beforehand with columns id (auto-increment), name, and email.
 
-3. Google reCAPTCHA keys can be obtained from Google reCAPTCHA admin.
+Google reCAPTCHA keys can be obtained from Google reCAPTCHA admin.
 
 Author
-Aneesh Krishna — GitHub.com/Aneesh495
+Aneesh Krishna — Github.com/Aneesh495
+
