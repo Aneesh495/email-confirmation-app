@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="emailApp">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Email Confirmation Sender</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body
+    ng-controller="FormController"
+    ng-class="isDarkMode ? 'dark-mode' : 'light-mode'"
+  >
+    <!-- Theme Toggle Switch -->
+    <label class="switch">
+      <input type="checkbox" ng-model="isDarkMode" />
+      <span class="slider"></span>
+    </label>
+
+    <!-- Main container to stack vertically -->
+    <div
+      class="main-container"
+      style="display: flex; flex-direction: column; align-items: center"
+    >
+      <div class="container" style="width: 100%; max-width: 400px">
+        <h1>Email Confirmation Sender</h1>
+
+        <form ng-submit="submitForm()">
+          <input
+            type="text"
+            ng-model="formData.name"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            ng-model="formData.email"
+            placeholder="Your Email"
+            required
+          />
+          <button type="submit" ng-disabled="isLoading">
+            Send Confirmation
+          </button>
+        </form>
+
+        <!-- Spinner -->
+        <div class="spinner" ng-if="isLoading"></div>
+
+        <!-- Messages -->
+        <p class="success" ng-if="successMessage">{{ successMessage }}</p>
+        <p class="error" ng-if="errorMessage">{{ errorMessage }}</p>
+      </div>
+
+      <div class="recaptcha-wrapper">
+        <div class="g-recaptcha" data-sitekey="6LeoAW8rAAAAAMi5k_FAH0zV8U7lYnvf_JLmFbVH"></div>
+      </div>
+    </div>
+  </body>
+</html>
