@@ -130,7 +130,7 @@ Consider using `.env` files or other secrets management methods for production.
 
 ## Author
 
-Aneesh Krishna — [GitHub Profile](https://github.com/Aneesh495)
+Aneesh Krishna — [GitHub](https://github.com/Aneesh495)
 
 ---
 
